@@ -7,9 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List Files
+        id: listfiles
         run: |
           pwd
           ls
+      - name: CheckoutAction
+        id: checkout
+        uses: actions/checkout@v1
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
