@@ -1,0 +1,14 @@
+name: Matrix
+on: push
+
+jobs:
+  node-version:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Log node version
+        run: node -v
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '6'
+      - name: Log node version after setting up node version
+        run: node -v
